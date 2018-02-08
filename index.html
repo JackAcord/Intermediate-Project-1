@@ -1,0 +1,87 @@
+<DOCTYPE! html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Project 1 - Estimate Form</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<div class=picture>
+<img src="marnies-dev-files/branding/logo/logo-2.png">
+</div>
+<div class="main">
+<form action="" id="cakeForm" onsubmit="return false;">
+<fieldset>
+	<h2>1. What size or serving amount would you like?</h2>
+	<h3>Choosing two or more from the list below will result in a tiered cake.</h3>
+	<input type="checkbox" id="selectedcake" value="sixInch" onclick="calculateTotal()">6" - 12 servings (+$30.00)</input>
+	<input type="checkbox" id="selectedcake" value="eightInch" onclick="calculateTotal()">8" - 20 servings (+$35.00)</input>
+	<input type="checkbox" id="selectedcake" value="tenInch" onclick="calculateTotal()">10" - 30 servings (+$40.00)</input>
+	<input type="checkbox" id="selectedcake" value="twelveInch" onclick="calculateTotal()">12" - 45 servings (+$45.00)</input><br>
+	<input type="checkbox" id="selectedcake" value="fourteenInch" onclick="calculateTotal()">14" - 62 servings (+$50.00)</input>
+	<input type="checkbox" id="selectedcake" value="sixteenInch" onclick="calculateTotal()">16" - 85 servings (+$60.00)</input>
+	<input type="checkbox" id="selectedcake" value="eighteenInch" onclick="calculateTotal()">18" - 125 servings (+$65.00)</input>
+	<input type="checkbox" id="selectedcake" value="twentyInch" onclick="calculateTotal()">20" - 144 servings (+$70.00)</input>
+	<input type="checkbox" id="selectedcake" value="twentyTwoInch" onclick="calculateTotal()">22" - 175 servings (+$80.00)</input>
+	<h2>2. What cake types would you like?</h2>
+	<h3>Choose the main cake type below. If you would like different types for your different tiers, please let us know in the additional information field.</h3>
+	<input type="radio" name="cakeType" value="vanilla" onclick="calculateTotal()">Vanilla (+5%)</input>
+	<input type="radio" name="cakeType" value="chocolate" onclick="calculateTotal()">Chocolate (+5%)</input>
+	<input type="radio" name="cakeType" value="strawberry" onclick="calculateTotal()">Strawberry (+5%)</input><br>
+	<input type="radio" name="cakeType" value="butterscotch" onclick="calculateTotal()">Butterscotch (+7%)</input>
+	<input type="radio" name="cakeType" value="marble" onclick="calculateTotal()">Marbled (+10%)</input>
+	<input type="radio" name="cakeType" value="velvet" onclick="calculateTotal()">Red Velvet (+10%)</input>
+	<input type="radio" name="cakeType" value="carrot" onclick="calculateTotal()">Carrot (+12%)</input>
+	<h2>3. What icings would you like?</h2>
+	<input type="radio" name="icing" value="buttercream" onclick="calculateTotal()">Buttercream (+2%)</input>
+	<input type="radio" name="icing" value="glossyGlaze" onclick="calculateTotal()">Glossy Glaze (+2%)</input>
+	<input type="radio" name="icing" value="creamCheese" onclick="calculateTotal()">Cream Cheese (+5%)</input><br>
+	<input type="radio" name="icing" value="fudge" onclick="calculateTotal()">Fudge (+5%)</input>
+	<input type="radio" name="icing" value="meringue" onclick="calculateTotal()">Meringue (+5%)</input>
+	<input type="radio" name="icing" value="ganache" onclick="calculateTotal()">Ganache (+5%)</input>
+	<input type="radio" name="icing" value="fondant" onclick="calculateTotal()">Rolled Fondant (+7%)</input>
+	<h2>4. What fillings would you like?</h2>
+	<select id="filling" name='filling' onchange="calculateTotal()">
+	<option value="none">Select Filling</option>
+	<option value="custard">Vanilla Custard (+3%)</option>
+	<option value="pastry">Pastry Cream (+3%)</option>
+	<option value="whiteChocolate">White Chocolate Filling (+6%)</option>
+	<option value="chocolateMousse">Chocolate Mousse (+6%)</option>
+	<option value="curd">English Lemon Curd (+6%)</option>
+	<option value="chocolateGanache">Chocolate Ganache (+6%)</option>
+	<option value="berries">Fresh Berries (+8%)</option>
+	<option value="raspberryMousse">Raspberry Mousse (+7%)</option>
+	<option value="belgium">Beligum Chocolate (+8%)</option>
+	<option value="cannoli">Canolli (+10%)</option>
+	</select>
+	<h2>5. What topper would you like?</h2>
+	<input type="radio" name="topper" value="couple" onclick="calculateTotal()">Classic Bride and Groom (+$50.00)</input>
+	<input type="radio" name="topper" value="sparklers" onclick="calculateTotal()">Sparklers (+$70.00)</input>
+	<input type="radio" name="topper" value="edibleSmall" onclick="calculateTotal()">Edible Small Centerpiece (+$120.00)</input>
+	<input type="radio" name="topper" value="edibleLarge" onclick="calculateTotal()">Edible Large Centrpiece (+$200.00)</input>
+	<h2>6. What decorations would you like?</h2>
+	<input type="radio" name="decorations" value="icing" onclick="calculateTotal()">Piped Icing (+5%)</input>
+	<input type="radio" name="decorations" value="caramelCrumble" onclick="calculateTotal()">Caramel Crumble (+10%)</input>
+	<input type="radio" name="decorations" value="chocolateCrumble" onclick="calculateTotal()">Chocolate Crumble (+10%)</input>
+	<input type="radio" name="decorations" value="pearl" onclick="calculateTotal()">Edible Pearls (+15%)</input><br>
+	<input type="radio" name="decorations" value="mirror" onclick="calculateTotal()">Mirror Glaze (+15%)</input>
+	<input type="radio" name="decorations" value="layered" onclick="calculateTotal()">Layered Buttercreams (+15%)</input>
+	<input type="radio" name="decorations" value="folding" onclick="calculateTotal()">Buttercream Folding (+15%)</input>
+	<input type="radio" name="decorations" value="lace" onclick="calculateTotal()">Floral Lace (+15%)</input><br>
+	<input type="radio" name="decorations" value="fruit" onclick="calculateTotal()">Fruit Decor (+20%)</input>
+	<input type="radio" name="decorations" value="florals" onclick="calculateTotal()">Piped Florals (+20%)</input>
+	<input type="radio" name="decorations" value="gumpaste" onclick="calculateTotal()">Gumpaste Florals (+25%)</input>
+	<h2>7. Would you like your cake pre-cut?</h2>
+	<input type="radio" name="cut" value="yes" onclick="calculateTotal()">Yes (+$20.00)</input>
+	<input type="radio" name="cut" value="no" onclick="calculateTotal()">No</input>
+	<h2>8. Please let us know any additional specifications for your cake.</h2>
+	<input type="text"  id="additional" name="additional"/>
+	<input type="submit" id="submit" value="Submit" onclick="calculateTotal()">
+    <div id="totalPrice"></div>
+</fieldset>
+</form>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
